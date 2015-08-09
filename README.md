@@ -20,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use all the plugins in every model:
+```ruby
+Sequel::Model.plugin :active_model_validations
+Sequel::Model.plugin :active_model_callbacks
+Sequel::Model.plugin :active_model_translations
+```
 
 ## Development
 
