@@ -1,5 +1,5 @@
 module Sequel
-  module Activemodel
+  module ActiveModel
     VERSION = "0.1.0"
   end
 end

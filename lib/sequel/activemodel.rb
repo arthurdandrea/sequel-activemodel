@@ -1,7 +1,7 @@
 require "sequel/activemodel/version"
 
 module Sequel
-  module Activemodel
+  module ActiveModel
     # Your code goes here...
   end
 end

@@ -5,7 +5,7 @@ require 'sequel/activemodel/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sequel-activemodel"
-  spec.version       = Sequel::Activemodel::VERSION
+  spec.version       = Sequel::ActiveModel::VERSION
   spec.authors       = ["Arthur D'Andréa Alemar"]
   spec.email         = ["aalemmar@gmail.com"]
 
