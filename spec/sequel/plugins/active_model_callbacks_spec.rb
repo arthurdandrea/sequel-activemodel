@@ -1,6 +1,5 @@
 require 'spec_helper'
-require 'sequel/plugins/active_model_callbacks'
-require 'sequel/plugins/active_model'
+
 describe Sequel::Plugins::ActiveModelCallbacks do
   let(:db) do
     db = Sequel.sqlite
@@ -14,9 +13,14 @@ describe Sequel::Plugins::ActiveModelCallbacks do
     model
   end
 
+  # filter out the Sequel::Model from the plugins Array
+  # it is causing trouble with rspec beautiful error generation
+  let(:plugins) do
+    model.plugins.select do |plugin| plugin != Sequel::Model end
+  end
+
   it 'loads :active_model plugin' do
-    model
-    expect(model.plugins).to include Sequel::Plugins::ActiveModel
+    expect(plugins).to include Sequel::Plugins::ActiveModel
   end
 
   describe 'before_save' do
