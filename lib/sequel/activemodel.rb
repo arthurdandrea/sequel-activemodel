@@ -1,4 +1,4 @@
-require "sequel/activemodel/version"
+require 'sequel/activemodel/version'
 
 module Sequel
   module ActiveModel
